@@ -1,16 +1,11 @@
 package com.skilldistillary.jets;
 
-public class CargoPlane extends Jets {
+public class CargoPlane extends Jets implements CargoCarrier{
+
+	@Override
+	public void loadCargo() {
+		System.out.println("loading cargo");		
+	}
 		
-		private int cargo;
-		
-		
-		public void loadCargo(int cargo) {
-			this.cargo += cargo;
-			
-		}
-		public void unloadCargo(int cargo) {
-			this.cargo += cargo;
-		}
 
 }

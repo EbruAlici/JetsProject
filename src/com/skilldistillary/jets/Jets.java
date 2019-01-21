@@ -1,6 +1,6 @@
 package com.skilldistillary.jets;
 
-public class Jets {
+public abstract class Jets {
 	
 	String model;
 	private int speed;
@@ -32,10 +32,13 @@ public class Jets {
 		this.price = (long) price;
 	}
 	
-	public String toOutPut() {
-	return " Plane model: " + model + " Speed: " + speed + " Range: " + range 
-			+" Miles " + " Price: $" + price;
 	
-}
+	@Override
+	public String toString() {
+		return "Jets [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
+	}
+	public void fly() {
+		System.out.println("flies " + (range / speed) + " hours");
+	}
 }
 
