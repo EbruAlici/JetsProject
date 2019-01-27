@@ -35,10 +35,11 @@ public abstract class Jets {
 	
 	@Override
 	public String toString() {
-		return "Jets [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
+		return "Jets [Model: " + model +"]" + ", [Speed: " + speed + "]" + ", [Range= " + range + "] " + " ,[Price= " + price + "]\n";
 	}
 	public void fly() {
 		System.out.println("flies " + (range / speed) + " hours");
+		System.out.println("-------------------------------------------------\n");
 	}
 }
 
